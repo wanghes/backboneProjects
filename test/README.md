@@ -3,7 +3,7 @@ backbonejs
 
 ## 用cmd: php -S localhost:3000 启动服务器 (提示：已经安装了 php&mysql服务);
 ### 浏览器中type : localhost:3000 将会自动加载'首页'
-```
+```javascript
 requirejs.config({
     baseUrl: 'lib',
     paths: {
