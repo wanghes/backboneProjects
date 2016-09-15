@@ -14,15 +14,18 @@ define([
 
     var DetailView = Backbone.View.extend({
         el: $('#content'),
-        render: function() {
-
+        initialize:function(){
+            $('.loading_box').show();
+        },
+        render: function(id) {
+            var self = this;
             productEntity.fetch({
                 data: $.param({ id: id }),
                 success: function(model, res, opt) {
                     var result = res[0];
                      var config = result;
                     var html = Mustache.to_html(detailTPL, config);
-                    this.$el.html(html);
+                    self.$el.html(html);
                     $('.loading_box').hide();
                 }
             });

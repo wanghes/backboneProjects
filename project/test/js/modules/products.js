@@ -20,8 +20,9 @@ define([
         events: {
             'click .information li': 'jumpUrl'
         },
-        initialize: function() {
-            /*$('.loading_box').show();*/
+        initialize: function(router) {
+            this.router = router;
+            $('.loading_box').show();
         },
         jumpUrl: function(event) {
             var id;
@@ -30,9 +31,8 @@ define([
             } else {
                 id = $(event.target).data('id');
             }
-            console.log(location);
-            location.href = '#detail/' + id;
-            //app_router.navigate('detail/' + id, { trigger: true });
+
+            this.router.navigate('detail/' + id, { trigger: true });
         },
         render: function() {
             var self = this;
@@ -54,6 +54,6 @@ define([
         }
     });
 
-    var productsView = new ProductsView({ model: blogModel });
-    return productsView;
+    
+    return ProductsView;
 })

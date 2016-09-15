@@ -47,13 +47,16 @@ define([
 
     var RegisterView = Backbone.View.extend({
         el: $('#content'),
-        initialize: function() {
+
+        initialize: function(router) {
+            this.router = router;
             $('.loading_box').show();
         },
         events: {
             'click #addBtn': 'addUser'
         },
         addUser: function() {
+            var self = this;
             var name = $('#name').val();
             var age = $('#age').val();
             var sex = $('#sex').val();
@@ -69,7 +72,7 @@ define([
                 },
                 success: function(model, response, options) {
                     if (response.status == 1) {
-                        app_router.navigate('login', { trigger: true });
+                        self.router.navigate('login', { trigger: true });
                     }
                 },
                 error: function(model, response, options) {

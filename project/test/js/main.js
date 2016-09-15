@@ -21,33 +21,10 @@ require([
     'app/register',
     'app/products',
     'app/detail',
-    'json!../config.json',
-    'text!tpl/login.html',
-    'text!tpl/detail.html'
-], function($, Backbone, _, Mustache, HeaderView, FooterView, RegisterView, ProductsView, DetailView, config, loginTPL) {
-
-    $('.loading_box').show();
-
-
-    var LoginView = Backbone.View.extend({
-        el: $('#content'),
-        initialize: function() {
-            $('.loading_box').show();
-        },
-        render: function() {
-            var config = {};
-            var html = Mustache.to_html(loginTPL, config);
-            this.$el.html(html);
-            var headerView = new HeaderView();
-            headerView.render('用户登录');
-            var footerView = new FooterView();
-            footerView.render();
-        }
-    });
-
-
-
-
+    'app/login',
+    'json!../config.json'
+], function($, Backbone, _, Mustache, HeaderView, FooterView, RegisterView, ProductsView, DetailView, LoginView, config) {
+    //$('.loading_box').show();
 
 
     var AppRouter = Backbone.Router.extend({
@@ -57,28 +34,31 @@ require([
             "register": "registerRoute",
             "*actions": "defaultRoute"
         },
+        initialize:function(){
+
+        },
 
         defaultRoute: function() {
-            $('.loading_box').show();
-            ProductsView.render();
+            var productsView = new ProductsView(app_router);
+            productsView.render();
         },
         loginRoute: function() {
             var loginView = new LoginView();
             loginView.render();
-            $('.loading_box').hide();
         },
-        detailRoute: function() {
-            $('.loading_box').show();
+        detailRoute: function(id) {
+            
             var detailView = new DetailView();
-            detailView.render();
+            detailView.render(id);
         },
         registerRoute: function() {
             $('.loading_box').show();
-            var registerView = new RegisterView();
+            var registerView = new RegisterView(app_router);
             registerView.render();
         }
     });
 
     var app_router = new AppRouter;
+    console.log(app_router);
     Backbone.history.start();
 });
