@@ -6,9 +6,9 @@ header("Access-Control-Allow-Method:POST,GET,PUT,DELETE");
 header('Access-Control-Allow-Credentials:true');
 header('Content-type: application/json');
 
-if(empty($_COOKIE['token'])){
+/*if(empty($_COOKIE['token'])){
     exit(json_encode(array('status'=>false,'msg'=>'没有获取到用户信息')));
-}
+}*/
 
 $dbname = "demo";
 $host = 'localhost';
