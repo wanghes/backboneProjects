@@ -51,12 +51,12 @@
             finishDel        :   false,  				  // 是否在上传文件完成后删除预览
             /* 外部获得的回调接口 */
             onSelect: function(selectFiles, allFiles){    // 选择文件的回调方法  selectFile:当前选中的文件  allFiles:还没上传的全部文件
-                console.info("当前选择了以下文件：");
-                console.info(selectFiles);
+                /*console.info("当前选择了以下文件：");
+                console.info(selectFiles);*/
             },
             onDelete: function(file, files){              // 删除一个文件的回调方法 file:当前删除的文件  files:删除之后的文件
-                console.info("当前删除了此文件：");
-                console.info(file.name);
+                /*console.info("当前删除了此文件：");
+                console.info(file.name);*/
             },
             onSuccess: function(file, response){          // 文件上传成功的回调方法
                 /*  console.info("此文件上传成功：");
@@ -68,8 +68,8 @@
                 urls.push(result.path);
             },
             onFailure: function(file, response){          // 文件上传失败的回调方法
-                console.info("此文件上传失败：");
-                console.info(file.name);
+                /*console.info("此文件上传失败：");
+                console.info(file.name);*/
             },
             onComplete: function(response){           	  // 上传完成的回调方法
                 console.info("文件上传完成");
@@ -85,7 +85,11 @@
             title:title,
             urls:urlAll
         },function(result){
-            console.log(result);
+            if(result.status){
+                setTimeout(function(){
+                    location.reload();
+                },2000);
+            }
         },'json');
 
         return false;
