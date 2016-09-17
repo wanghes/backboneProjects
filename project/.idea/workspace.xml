@@ -25,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addGirls.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_server/addGirls.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.147059" vertical-offset="0" max-vertical-offset="2575">
-              <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_server/post.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,8 +38,8 @@
       <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.17647" vertical-offset="0" max-vertical-offset="1050">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state vertical-scroll-proportion="-6.617647" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -68,28 +58,38 @@
       <file leaf-file-name="girls.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/modules/girls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="2075">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="2075">
+              <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="girlDetail.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/js/modules/detail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1400">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/js/modules/products.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40805224" vertical-offset="0" max-vertical-offset="1975">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="girlDetail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/modules/girlDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54406965" vertical-offset="0" max-vertical-offset="1525">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_server/detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.147059" vertical-offset="0" max-vertical-offset="1325">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1525">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -166,8 +166,8 @@
         <option value="$PROJECT_DIR$/test/js/config.json" />
         <option value="$PROJECT_DIR$/test_server/upAction/UploadAction.php" />
         <option value="$PROJECT_DIR$/../.gitignore" />
-        <option value="$PROJECT_DIR$/test/js/modules/girls.js" />
         <option value="$PROJECT_DIR$/test/js/modules/girlDetail.js" />
+        <option value="$PROJECT_DIR$/test/js/modules/girls.js" />
       </list>
     </option>
   </component>
@@ -602,22 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/modules/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1400">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/modules/products.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1975">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_server/addGirlAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7352941" vertical-offset="0" max-vertical-offset="1125">
@@ -680,14 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.17647" vertical-offset="0" max-vertical-offset="1050">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.027964206" vertical-offset="0" max-vertical-offset="894">
@@ -704,18 +680,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/modules/girls.js">
+    <entry file="file://$PROJECT_DIR$/test/js/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="2075">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        <state vertical-scroll-proportion="-6.617647" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/js/modules/girlDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54406965" vertical-offset="0" max-vertical-offset="1525">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1525">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/modules/girls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="2075">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/modules/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1400">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/modules/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40805224" vertical-offset="0" max-vertical-offset="1975">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>

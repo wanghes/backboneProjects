@@ -46,15 +46,15 @@ define([
                     withCredentials: true
                 },
                 success: function(collection, response) {
-                    var config = {},
+                    var result = {},
                         html;
                     if(response.status){
-                        config['list'] = response.data;
-                        config['list'].forEach(function(value){
+                        result['list'] = response.data;
+                        result['list'].forEach(function(value){
                             var urls = JSON.parse(value['urls']);
                             value['url'] =config.serverUrl+'/upAction/'+urls[0];
                         });
-                        html = Mustache.to_html(girlsListTPL, config);
+                        html = Mustache.to_html(girlsListTPL, result);
                         self.$el.html(html);
                         $('.loading_box').hide();
                     }else{

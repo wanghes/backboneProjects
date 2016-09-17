@@ -27,14 +27,14 @@ define([
                 },
                 data: $.param({ id: id }),
                 success: function(model, res, opt) {
-                    var config;
+                    var result;
                     if(res.status){
-                        config = res.data;
-                        config.urls = JSON.parse(config.urls);
-                        config.urls.forEach(function(value,index){
-                            config.urls[index] =config.serverUrl+'/upAction/'+value;
+                        result = res.data;
+                        result.urls = JSON.parse(result.urls);
+                        result.urls.forEach(function(value,index){
+                            result.urls[index] = config.serverUrl+'/upAction/'+value;
                         });
-                        var html = Mustache.to_html(girlDetailTPL, config);
+                        var html = Mustache.to_html(girlDetailTPL, result);
                         self.$el.html(html);
                         $('.loading_box').hide();
                     }else{
