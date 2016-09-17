@@ -16,7 +16,7 @@ if(count($_FILES) > 0)
     $tmp = $f['tmp_name'];
     $dateInfo = '/upload/girls/'.$dataCur;
     if(!is_dir($dateInfo)){
-        ($dateInfo, 0777, true);
+        mkdir($dateInfo, 0777, true);
     }
 
     $filename = $dateInfo .'/'.$image_name;
