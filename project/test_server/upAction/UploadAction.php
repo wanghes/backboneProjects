@@ -17,7 +17,8 @@ if(count($_FILES) > 0)
     $dateInfo = '/upload/girls/'.$dataCur;
     if(!is_dir($dateInfo)){
         mkdir($dateInfo,0777,true);
-    
+
+chmod($dateInfo, 0777);
     } 
 
     if(file_exists($dateInfo))  
