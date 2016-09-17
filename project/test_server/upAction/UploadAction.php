@@ -22,10 +22,11 @@ if(count($_FILES) > 0)
         chmod($dateInfo, 0777);
     } 
 
-    if(file_exists($dateInfo))  
-      $mulu="目录创建成功！";  
-else  
-      $mulu= "创建目录失败！";  
+    if(file_exists($dateInfo)){
+        $mulu="目录创建成功！";
+    }else{
+        $mulu= "创建目录失败！";
+    }
 
     $filename = $dateInfo .'/'.$image_name;
 

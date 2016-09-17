@@ -52,7 +52,7 @@ define([
                         config['list'] = response.data;
                         config['list'].forEach(function(value){
                             var urls = JSON.parse(value['urls']);
-                            value['url'] ='http://localhost:3000'+urls[0];
+                            value['url'] =config.serverUrl+'/upAction/'+urls[0];
                         });
                         html = Mustache.to_html(girlsListTPL, config);
                         self.$el.html(html);

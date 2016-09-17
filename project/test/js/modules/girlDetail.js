@@ -32,7 +32,7 @@ define([
                         config = res.data;
                         config.urls = JSON.parse(config.urls);
                         config.urls.forEach(function(value,index){
-                            config.urls[index] = 'http://localhost:3000'+value;
+                            config.urls[index] =config.serverUrl+'/upAction/'+value;
                         });
                         var html = Mustache.to_html(girlDetailTPL, config);
                         self.$el.html(html);
