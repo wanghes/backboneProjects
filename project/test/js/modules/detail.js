@@ -5,10 +5,11 @@ define([
     'mustache',
     'text!tpl/detail.html',
     'app/header',
-    'app/footer'
-], function($, Backbone, _, Mustache, detailTPL, HeaderView, FooterView) {
+    'app/footer',
+    'json!config'
+], function($, Backbone, _, Mustache, detailTPL, HeaderView, FooterView,config) {
     var product = Backbone.Model.extend({
-        urlRoot: "http://localhost:3000/detail.php"
+        urlRoot: config.serverUrl+"detail.php"
     });
     var productEntity = new product();
 
@@ -20,13 +21,21 @@ define([
         render: function(id) {
             var self = this;
             productEntity.fetch({
+                xhrFields: {
+                    withCredentials: true
+                },
                 data: $.param({ id: id }),
                 success: function(model, res, opt) {
-                    var result = res[0];
-                     var config = result;
-                    var html = Mustache.to_html(detailTPL, config);
-                    self.$el.html(html);
-                    $('.loading_box').hide();
+                    var config;
+                    if(res.status){
+                        config = res.data;
+                        var html = Mustache.to_html(detailTPL, config);
+                        self.$el.html(html);
+                        $('.loading_box').hide();
+                    }else{
+                        alert(res.msg);
+                        console.log(res.msg);
+                    }
                 }
             });
 

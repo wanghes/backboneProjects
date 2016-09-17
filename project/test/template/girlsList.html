@@ -1,0 +1,19 @@
+<div class="information pure-g">
+    <ul class="list">
+        {{#list}}
+        <li data-id="{{id}}">
+            <div class="l-box">
+                <h3 class="information-head">
+                    <a href="javascript:;" alt="{{title}}">{{title}}</a>
+                </h3>
+                <div>
+                    <img src="{{url}}">
+                    <div class="time">
+                        <span>{{pubtime}}</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/list}}
+    </ul>
+</div>

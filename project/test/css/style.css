@@ -14,7 +14,7 @@ a {
     color: #333;
 }
 
-input[type='text'],
+input[type='text'],input[type='password'],
 textarea {
     padding: 8px;
     border: 1px solid #ccc;
@@ -26,13 +26,15 @@ textarea {
 
 input[type='text']:focus,
 input[type='text']:hover,
+input[type='password']:focus,
+input[type='password']:hover,
 textarea:focus,
 textarea:hover {
     border: 1px solid #1c77c9;
     box-shadow: 0 0 3px #1c77c9;
 }
 
-input[type='text'].errorStatus,
+input[type='text'].errorStatus,input[type='password'].errorStatus,
 textarea.errorStatus {
     border: 1px solid #f27b7b;
     background: #fce8e8;
@@ -93,8 +95,9 @@ textarea.errorStatus {
     color: #9f0e0e;
     border: 1px solid #f27b7b;
 }
-
-//自定义
+.right_top{
+    position: absolute; top:0; right: 15px; z-index: 1000; display: none;
+}
 #wrap {
     position: absolute;
     top: 0;

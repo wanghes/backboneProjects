@@ -5,10 +5,11 @@ define([
     'mustache',
     'text!tpl/register.html',
     'app/footer',
-    'app/header'
-], function($, Backbone, _, Mustache, registerTPL,FooterView, HeaderView) {
+    'app/header',
+    'json!config'
+], function($, Backbone, _, Mustache, registerTPL,FooterView, HeaderView,config) {
     var userModel = Backbone.Model.extend({
-        urlRoot: 'http://localhost:3000/register.php',
+        urlRoot:config.serverUrl+'register.php',
         initialize: function() {
             this.bind("change:name", function() {
                 var name = this.get("name");
@@ -27,6 +28,12 @@ define([
                 return {
                     node: 'name',
                     msg: 'name不能为空'
+                };
+            }
+            if (attributes.password == '') {
+                return {
+                    node: 'password',
+                    msg: 'password不能为空'
                 };
             }
             if (attributes.sex == '') {
@@ -58,10 +65,12 @@ define([
         addUser: function() {
             var self = this;
             var name = $('#name').val();
+            var password = $('#password').val();
             var age = $('#age').val();
             var sex = $('#sex').val();
             var user = new userModel({
                 name: name,
+                password:password,
                 age: age,
                 sex: sex
             });
@@ -71,7 +80,7 @@ define([
                     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 },
                 success: function(model, response, options) {
-                    if (response.status == 1) {
+                    if (response.status) {
                         self.router.navigate('login', { trigger: true });
                     }
                 },
