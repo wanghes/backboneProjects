@@ -16,10 +16,15 @@ if(count($_FILES) > 0)
     $tmp = $f['tmp_name'];
     $dateInfo = '/upload/girls/'.$dataCur;
     if(!is_dir($dateInfo)){
-        mkdir($dateInfo);
-        chmod($dateInfo,0777);
-    }
+        mkdir($dateInfo,0777);
+    
+    } 
 
+    if(file_exists($dateInfo))  
+      echo "目录创建成功！";  
+else  
+      echo "创建目录失败！";  
+    
     $filename = $dateInfo .'/'.$image_name;
 
     move_uploaded_file($tmp,'../'.$filename);
