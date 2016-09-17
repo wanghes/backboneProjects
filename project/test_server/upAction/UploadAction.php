@@ -7,7 +7,7 @@ function extend($file_name){
 }
 if(count($_FILES) > 0)
 {
-
+    try {
     $f = $_FILES['file'];
     $image_info = getimagesize($_FILES['file']['tmp_name']);
     $name = $f['name'];
@@ -22,6 +22,11 @@ if(count($_FILES) > 0)
     $filename = $dateInfo .'/'.$image_name;
 
     move_uploaded_file($tmp,'../'.$filename);
+    } catch (Exception $e) {   
+    print $e->getMessage();   
+    exit();   
+}
+
 
     exit(json_encode(array("status"=>true,"path"=>$filename,"msg"=>"上传成功！")));
 
