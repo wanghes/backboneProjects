@@ -18,7 +18,7 @@ define([
     var ProductsView = Backbone.View.extend({
         el: $('#content'),
         events: {
-            'click .information li': 'jumpUrl'
+            'click #productsList li': 'jumpUrl'
         },
         initialize: function(router) {
             this.router = router;
@@ -35,7 +35,6 @@ define([
             this.router.navigate('detail/' + id, { trigger: true });
         },
         render: function() {
-            /*console.log(this.router);*/
             var self = this;
             if(!cookie.get('token')){
                 self.router.navigate('#/login');

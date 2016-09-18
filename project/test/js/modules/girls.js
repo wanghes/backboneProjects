@@ -22,7 +22,7 @@ define([
             $('.loading_box').show();
         },
         events: {
-            'click .information li': 'jumpGirlUrl'
+            'click #girlsList li': 'jumpGirlUrl'
         },
         jumpGirlUrl: function(event) {
             var id;
