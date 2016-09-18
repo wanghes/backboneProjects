@@ -31,7 +31,6 @@ define([
             } else {
                 id = $(event.target).data('id');
             }
-
             this.router.navigate('#/girl/' + id, { trigger: true });
         },
         render:function(){

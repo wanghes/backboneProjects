@@ -19,13 +19,13 @@ define([
             $('.loading_box').show();
         },
 
-        render: function(id) {
+        render: function(gid) {
             var self = this;
             girlEntity.fetch({
                 xhrFields: {
                     withCredentials: true
                 },
-                data: $.param({ id: id }),
+                data: $.param({ gid: gid }),
                 success: function(model, res, opt) {
                     var result;
                     if(res.status){

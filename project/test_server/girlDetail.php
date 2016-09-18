@@ -14,7 +14,7 @@ $dbname = "demo";
 $host = 'localhost';
 $user = 'root';
 $password = 'yinrenlei00';
-$id = $_GET['id'];
+$id = $_GET['gid'];
 try {
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
