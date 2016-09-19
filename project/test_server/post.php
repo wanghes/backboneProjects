@@ -7,9 +7,9 @@ header('Access-Control-Allow-Credentials:true');
 header('Content-type: application/json');
 
 session_start();
-/*if(empty($_COOKIE['token'])){
+if(empty($_COOKIE['token'])){
     exit(json_encode(array('status'=>false,'msg'=>'没有获取到用户信息')));
-}*/
+}
 
 $dbname = "demo";
 $host = 'localhost';
@@ -22,7 +22,7 @@ try {
     $sql = "select * from food";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
-    exit(json_encode(array('status'=>true,'data'=>$stmt->fetchAll(PDO::FETCH_ASSOC))));
+    exit(json_encode(array('status'=>true,'token'=>$_COOKIE['token'],'data'=>$stmt->fetchAll(PDO::FETCH_ASSOC))));
 }
 catch(PDOException $e) {
     echo $e->getMessage();
